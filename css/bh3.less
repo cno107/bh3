@@ -1,0 +1,221 @@
+//1.如果有容器height=0 看看是不是没clearfix
+
+@import 'reset.css';
+
+@import 'home_p.less';//第一屏
+@import 'AAA.less'; //第二屏
+@import 'BBB.less'; //第三屏
+@import 'CCC.less'; //第四屏
+@import 'DDD.less'; //第五屏
+
+@import 'bootScreen.less'; //开机动画
+
+@import 'head.less';//头部
+
+#wrap {
+  height: 100%;
+  width: 100% ;
+  #content {
+
+  height: 685px;
+  position: relative;
+  background-color: grey;
+  width: 100%;
+  overflow: hidden;
+  & > ul.list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    & > li {
+      position: relative;
+      width: 1100px;
+      transition: transform 0.5s;
+      // home_p
+      // AAA
+      // BBB
+      // CCC
+      // DDD
+      &:nth-child(1) {
+        background-image: url("../img2/bg.jpg");
+        background-position: 100% 100%;
+      }
+      &:nth-child(2) {
+        background-image: url("../img2/bg.jpg");
+        background-position: 50% 50%;
+      }
+      &:nth-child(3) {
+        background-image: url("../img2/bg.jpg");
+        background-position: 100% 0;
+      }
+      &:nth-child(4) {
+        background-image: url("../img2/bg.jpg");
+        background-position: 0% 100%;
+      }
+      &:nth-child(5) {
+        background-image: url("../img2/bg.jpg");
+        background-position: 0% 0%;
+      }
+    }
+
+  }
+  & > ul.dot {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 20px;
+    top: 35%;
+    & > li {
+      //box-sizing: border-box;
+      width: 10px;
+      height: 10px;
+      border: 3px solid white;
+      border-radius: 50%;
+      margin-top: 10px;
+      &.active {
+        background: greenyellow;
+      }
+
+    }
+  }
+}
+
+}
+
+/////common style
+.commonTitle {
+  color:#009ee0;
+  font:bold 80px/0.8 Georgia;
+  letter-spacing:-5px;
+}
+.commonText{
+  color:white;
+  line-height:1.5;
+  font-size:15px;
+}
+.commonSection{
+  width: 1100px;
+  height: 600px;
+  //background-color: mediumaquamarine;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+//animation
+@keyframes AI {
+  from{ transform:rotateY(0deg);}
+  49%{
+    transform:rotateY(0deg);
+  }
+  50%{
+    left:500px;
+    transform:rotateY(180deg);
+  }
+  to{ transform:rotateY(180deg);}
+}
+
+@keyframes leftHide {
+  from{
+    visibility: visible;
+  }
+
+  50%{
+    transform: translateX(-40%) rotateY(30deg)  scale(.8);
+
+  }
+  to{
+
+    transform: translateZ(-200px);
+    visibility: hidden;
+  }
+
+}
+@keyframes rightShow {
+  from{
+    visibility:hidden;
+    transform: translateZ(-200px);
+  }
+
+  50%{
+    transform: translateX(40%) rotateY(-30deg)  scale(.8);
+  }
+  to{}
+}
+@keyframes leftShow {
+  from{
+    visibility:hidden;
+    transform: translateZ(-200px);
+  }
+
+  50%{
+    transform: translateX(-40%) rotateY(30deg)  scale(.8);
+
+  }
+  to{
+    visibility:visible;
+  }
+}
+@keyframes rightHide {
+  from{
+    visibility: visible;
+  }
+
+  50%{
+    transform: translateX(40%) rotateY(-30deg)  scale(.8);
+
+  }
+  to{
+
+    transform: translateZ(-200px);
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//entryAnimation
+
+.plane1,.plane2,.plane3,
+.pencil1,.pencil2,.pencil3,
+#content .CCC .box-wrap .box1,
+#content .CCC .box-wrap .box2,
+#content .DDD header,
+#content .DDD .text,
+#content .DDD .text_bu
+{
+  transition: transform 1s , opacity 1s;
+}
+#content .DDD .text_bu{
+  transition: transform 3s , opacity 3s;
+}
+//特殊情况 由于最后一瓶直接切换到第一屏 导致第一瓶入场动画过快
+#content ul li.home_p .layer,
+#content ul li.home_p .btn{
+  transition: transform 1.5s , opacity 1.5s;
+}
+//补充
+h2{
+  font-weight: bold;
+  font-size:20px;
+  color:white;
+  text-shadow:black 1px 1px 10px;
+}

@@ -1,0 +1,124 @@
+//第三屏
+.BBB > section {
+  &:extend(.commonSection);
+  header{
+    &:extend(.commonTitle);
+    position: relative;
+    z-index:2 ;
+    margin:50px 0 100px 50px;
+
+  }
+  .list{
+    position: relative;
+    z-index:2 ;
+    margin-left:50px;
+
+    .item{
+      position: relative;
+      float:left;
+      width:234px;
+      height:117px;
+      margin:0 1px;
+      overflow: hidden;
+      &:nth-child(4){
+        //width:332px;
+        //473 × 317
+        width:473px/2;
+        //height:317px;
+      }
+      &:hover {
+        .mask {
+          background-color: rgba(0, 0, 0, .6);
+          span, .icon {
+            display: block;
+            text-align: center;
+          }
+        }
+        img{
+
+          transform: rotate(-30deg) scale(1.5);
+          transition:transform 1s ;
+
+        }
+      }
+      .mask{
+
+        position: absolute;
+        z-index: 1;
+        left:0;right:0;bottom:0;top:0;
+        margin:auto;
+        color:white;
+        background-color:rgba(0,0,0,0);
+        transition:background-color 1s;
+        box-sizing: border-box; /*文字四周空隙*/
+        padding:10px;
+        span{
+          display:none;
+          transition:display .7s;
+        }
+        span.small{
+          font-size:14px;
+        }
+        .icon{
+          display:none;
+
+          width:32px;
+          height:34px;
+          //background:#fff;
+          position: absolute;
+          left:0;right:0;bottom:0;top:10px;
+          margin:auto;
+          background: url("../img2/zoomico.png") no-repeat;
+          transition: background-position 0.7s;
+          &:hover{
+            background-position: 0 -35px;
+          }
+
+        }
+
+      }
+      img{
+
+        border:2px solid white;
+      }
+    }
+
+
+  }
+  .robot{
+    width:167px;
+    height:191px;
+    background:url("../img2/robot.png") no-repeat;
+    position: absolute;
+
+    z-index:2 ;
+    left:900px;top:170px;
+    animation: AI 3s linear infinite;
+  }
+  .pencil1{
+    width:180px;
+    height:97px;
+    position: absolute;
+    left:500px;
+    top:0;
+    background:url("../img2/pencel1.png") no-repeat;
+  }
+  .pencil2{
+    width:268px;
+    height:38px;
+    position: absolute;
+    left:300px;
+    top:250px;
+    background:url("../img2/pencel2.png") no-repeat;
+
+  }
+  .pencil3{
+    width:441px;
+    height:231px;
+    position: absolute;
+    left:650px;
+    top:300px;
+    background:url("../img2/pencel3.png") no-repeat;
+
+  }
+}

@@ -1,0 +1,78 @@
+//第四屏
+.CCC{
+  section {
+    &:extend(.commonSection);
+    header{
+      &:extend(.commonTitle);
+    }
+    .text{
+      &:extend(.commonText);
+      width:400px;
+      margin-top:50px;
+    }
+    .box-wrap{
+      .box1,.box2{
+        width:260px;
+        height:200px;
+        position:absolute;
+        border:5px solid rgba(255,255,255,.5);
+        border-radius:8px;
+        overflow: hidden;
+        &:hover  .down{
+          transform: scale(1);
+        }
+        .down{
+          position:absolute;
+          left:0;right:0;bottom:0;top:0;
+          margin:auto;
+
+          transition: transform 1s;
+          transform: scale(1.5);
+
+        }
+        .up{
+          position:absolute;
+          left:0;right:0;bottom:0;top:0;
+          margin:auto;
+        }
+      }
+      .box1{
+        left:750px;top:50px;
+        .down{
+          background: url("../img2/ka3x.png") no-repeat;
+          background-size:cover;
+        }
+
+      }
+      .box2{
+        left:600px;top:290px;
+        .down{
+          background: url("../img2/ki2x.png") no-repeat;
+          background-size:cover;
+        }
+
+      }
+      li{
+        float: left;
+        position: relative;
+        width:100%/2;
+        height:100%/2;
+        overflow: hidden;
+        transition: .5s;
+        img{
+          position: absolute;
+          width: 260px;
+          height:200px;
+
+        }
+      }
+    }
+
+    .line{
+      width:357px;height:998px;
+      background-image: url("../img2/greenLine.png");
+      position:absolute;
+      left:532px;
+    }
+  }
+}

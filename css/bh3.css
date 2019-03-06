@@ -1,0 +1,709 @@
+@import 'reset.css';
+.home_p section .layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.home_p section .layer li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 10px solid white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px 10px aquamarine;
+  visibility: hidden;
+}
+.home_p section .layer li.xianshi {
+  visibility: visible;
+}
+.home_p section .layer li.leftHide {
+  visibility: hidden;
+  animation: 1s leftHide 1 linear;
+}
+.home_p section .layer li.rightShow {
+  visibility: visible;
+  animation: 1s rightShow 1 linear;
+}
+.home_p section .layer li.leftShow {
+  visibility: visible;
+  animation: 1s leftShow  1 linear;
+}
+.home_p section .layer li.rightHide {
+  visibility: hidden;
+  animation: 1s rightHide  1 linear;
+}
+.home_p section .layer li:nth-of-type(1) {
+  background-image: url("../img2/p1_1.jpg");
+  background-size: cover;
+}
+.home_p section .layer li:nth-of-type(2) {
+  background-image: url("../img2/p1_2.jpg");
+  background-size: cover;
+}
+.home_p section .layer li:nth-of-type(3) {
+  background-image: url("../img2/p1_3.jpg");
+  background-size: cover;
+}
+.home_p section .layer li:nth-of-type(4) {
+  background-image: url("../img2/p1_4.jpg");
+  background-size: cover;
+}
+.home_p section .layer li:nth-of-type(5) {
+  background-image: url("../img2/p1_5.jpg");
+  background-size: cover;
+}
+.home_p section .layer div {
+  text-align: center;
+  margin-top: 200px;
+  color: hotpink;
+}
+.home_p section .btn {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.home_p section .btn li {
+  display: inline-block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 4px rgba(25, 25, 25, 0.8);
+}
+.home_p section .btn li.active {
+  background-color: white;
+  cursor: pointer;
+}
+.home_p section .btn li:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.AAA {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.AAA section header {
+  position: relative;
+  z-index: 2 ;
+}
+.AAA section .A2 {
+  width: 400px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2 ;
+}
+.AAA section .A3 {
+  width: 480px;
+  position: absolute;
+  right: 50px;
+  top: 70px;
+  z-index: 2 ;
+}
+.AAA section .A3 .line {
+  position: absolute;
+  width: 9px;
+  height: 410px;
+  background: url("../img2/plus_row.png") no-repeat;
+  top: -5px;
+}
+.AAA section .A3 .line:nth-of-type(1) {
+  left: -4px;
+}
+.AAA section .A3 .line:nth-of-type(2) {
+  left: 114px;
+}
+.AAA section .A3 .line:nth-of-type(3) {
+  left: 233px;
+}
+.AAA section .A3 .line:nth-of-type(4) {
+  left: 352px;
+}
+.AAA section .A3 .line:nth-of-type(5) {
+  left: 471px;
+}
+.AAA section .A3 .item {
+  float: left;
+  width: 117px;
+  height: 132px;
+  margin: 1px;
+  position: relative;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+.AAA section .A3 .item .face,
+.AAA section .A3 .item .back {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+.AAA section .A3 .item .face {
+  transform: rotateY(180deg);
+}
+.AAA section .A3 .item .face img {
+  width: 117px;
+  height: 132px;
+}
+.AAA section .A3 .item:nth-of-type(1) .back {
+  background: url('../img2/bks.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(2) .back {
+  background: url('../img2/tata.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(3) .back {
+  background: url('../img2/gu.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(4) .back {
+  background: url('../img2/bks.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(5) .back {
+  background: url('../img2/leonberg.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(6) .back {
+  background: url('../img2/hlx.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(7) .back {
+  background: url('../img2/hlx.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(8) .back {
+  background: url('../img2/leonberg.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(9) .back {
+  background: url('../img2/bks.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(10) .back {
+  background: url('../img2/pcwelt.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(11) .back {
+  background: url('../img2/lbs.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:nth-of-type(12) .back {
+  background: url('../img2/bks.png') no-repeat 50% 50%;
+}
+.AAA section .A3 .item:hover .face {
+  transform: rotateY(360deg);
+}
+.AAA section .A3 .item:hover .back {
+  transform: rotateY(180deg);
+}
+.AAA section .plane1 {
+  width: 359px;
+  height: 283px;
+  position: absolute;
+  left: 300px;
+  top: -100px;
+  background: url("../img2/plane1.png") no-repeat;
+}
+.AAA section .plane2 {
+  width: 309px;
+  height: 249px;
+  position: absolute;
+  left: -100px;
+  top: 200px;
+  background: url("../img2/plane2.png") no-repeat;
+}
+.AAA section .plane3 {
+  width: 230px;
+  height: 182px;
+  position: absolute;
+  left: 300px;
+  top: 400px;
+  background: url("../img2/plane3.png") no-repeat;
+}
+.BBB > section header {
+  position: relative;
+  z-index: 2 ;
+  margin: 50px 0 100px 50px;
+}
+.BBB > section .list {
+  position: relative;
+  z-index: 2 ;
+  margin-left: 50px;
+}
+.BBB > section .list .item {
+  position: relative;
+  float: left;
+  width: 234px;
+  height: 117px;
+  margin: 0 1px;
+  overflow: hidden;
+}
+.BBB > section .list .item:nth-child(4) {
+  width: 236.5px;
+}
+.BBB > section .list .item:hover .mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.BBB > section .list .item:hover .mask span,
+.BBB > section .list .item:hover .mask .icon {
+  display: block;
+  text-align: center;
+}
+.BBB > section .list .item:hover img {
+  transform: rotate(-30deg) scale(1.5);
+  transition: transform 1s ;
+}
+.BBB > section .list .item .mask {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 1s;
+  box-sizing: border-box;
+  /*文字四周空隙*/
+  padding: 10px;
+}
+.BBB > section .list .item .mask span {
+  display: none;
+  transition: display .7s;
+}
+.BBB > section .list .item .mask span.small {
+  font-size: 14px;
+}
+.BBB > section .list .item .mask .icon {
+  display: none;
+  width: 32px;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 10px;
+  margin: auto;
+  background: url("../img2/zoomico.png") no-repeat;
+  transition: background-position 0.7s;
+}
+.BBB > section .list .item .mask .icon:hover {
+  background-position: 0 -35px;
+}
+.BBB > section .list .item img {
+  border: 2px solid white;
+}
+.BBB > section .robot {
+  width: 167px;
+  height: 191px;
+  background: url("../img2/robot.png") no-repeat;
+  position: absolute;
+  z-index: 2 ;
+  left: 900px;
+  top: 170px;
+  animation: AI 3s linear infinite;
+}
+.BBB > section .pencil1 {
+  width: 180px;
+  height: 97px;
+  position: absolute;
+  left: 500px;
+  top: 0;
+  background: url("../img2/pencel1.png") no-repeat;
+}
+.BBB > section .pencil2 {
+  width: 268px;
+  height: 38px;
+  position: absolute;
+  left: 300px;
+  top: 250px;
+  background: url("../img2/pencel2.png") no-repeat;
+}
+.BBB > section .pencil3 {
+  width: 441px;
+  height: 231px;
+  position: absolute;
+  left: 650px;
+  top: 300px;
+  background: url("../img2/pencel3.png") no-repeat;
+}
+.CCC section .text {
+  width: 400px;
+  margin-top: 50px;
+}
+.CCC section .box-wrap .box1,
+.CCC section .box-wrap .box2 {
+  width: 260px;
+  height: 200px;
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.CCC section .box-wrap .box1:hover .down,
+.CCC section .box-wrap .box2:hover .down {
+  transform: scale(1);
+}
+.CCC section .box-wrap .box1 .down,
+.CCC section .box-wrap .box2 .down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  transition: transform 1s;
+  transform: scale(1.5);
+}
+.CCC section .box-wrap .box1 .up,
+.CCC section .box-wrap .box2 .up {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.CCC section .box-wrap .box1 {
+  left: 750px;
+  top: 50px;
+}
+.CCC section .box-wrap .box1 .down {
+  background: url("../img2/ka3x.png") no-repeat;
+  background-size: cover;
+}
+.CCC section .box-wrap .box2 {
+  left: 600px;
+  top: 290px;
+}
+.CCC section .box-wrap .box2 .down {
+  background: url("../img2/ki2x.png") no-repeat;
+  background-size: cover;
+}
+.CCC section .box-wrap li {
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  transition: .5s;
+}
+.CCC section .box-wrap li img {
+  position: absolute;
+  width: 260px;
+  height: 200px;
+}
+.CCC section .line {
+  width: 357px;
+  height: 998px;
+  background-image: url("../img2/greenLine.png");
+  position: absolute;
+  left: 532px;
+}
+.DDD section .text {
+  position: absolute;
+  width: 550px;
+  left: 547px;
+  top: 0;
+}
+.DDD section .text_bu {
+  position: absolute;
+  width: 200px;
+  top: 120px;
+  right: 0px;
+}
+.DDD section .team_wrap {
+  width: 100%;
+  height: 448px;
+  position: relative;
+}
+.DDD section .team_wrap canvas {
+  position: absolute;
+}
+.DDD section .team_wrap ul.team {
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.DDD section .team_wrap ul.team li {
+  display: inline;
+  transition: opacity 1s;
+}
+#bootScreen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 109;
+}
+#bootScreen .up {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  background: darkblue;
+}
+#bootScreen .down {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0px;
+  transform-origin: bottom;
+  background: darkblue;
+}
+#bootScreen canvas {
+  position: relative;
+}
+#bootScreen .line {
+  height: 4px;
+  width: 0%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  z-index: 110;
+  transition: width 12s;
+}
+#head {
+  width: 100%;
+  background-color: #ffffff !important;
+  position: relative;
+}
+#head .headMain {
+  overflow: hidden;
+  width: 1100px;
+  height: 80px;
+  margin: 0 auto;
+}
+#head .headMain .logo {
+  float: left;
+  margin-top: 4px;
+}
+#head .headMain .logo img {
+  width: 188px;
+}
+#head .headMain .nav {
+  float: right;
+  margin-top: 50px;
+}
+#head .headMain .nav ul li {
+  float: right;
+  margin-left: 40px;
+  position: relative;
+}
+#head .headMain .nav ul li :hover .up {
+  width: 100%;
+}
+#head .headMain .nav ul li .up {
+  color: black;
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+#head .headMain .nav ul li .down {
+  color: greenyellow;
+}
+#head .headMain .arrow {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  z-index: 1;
+}
+#head .headMain .arrow img {
+  position: absolute;
+}
+#head .headMain .music {
+  float: left;
+  width: 28px;
+  height: 28px;
+  background: url("../img2/musicon.gif") no-repeat;
+  background-size: cover;
+  margin-top: 35px;
+}
+#head .headMain .music:hover {
+  cursor: pointer;
+}
+#wrap {
+  height: 100%;
+  width: 100% ;
+}
+#wrap #content {
+  height: 685px;
+  position: relative;
+  background-color: grey;
+  width: 100%;
+  overflow: hidden;
+}
+#wrap #content > ul.list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#wrap #content > ul.list > li {
+  position: relative;
+  width: 1100px;
+  transition: transform 0.5s;
+}
+#wrap #content > ul.list > li:nth-child(1) {
+  background-image: url("../img2/bg.jpg");
+  background-position: 100% 100%;
+}
+#wrap #content > ul.list > li:nth-child(2) {
+  background-image: url("../img2/bg.jpg");
+  background-position: 50% 50%;
+}
+#wrap #content > ul.list > li:nth-child(3) {
+  background-image: url("../img2/bg.jpg");
+  background-position: 100% 0;
+}
+#wrap #content > ul.list > li:nth-child(4) {
+  background-image: url("../img2/bg.jpg");
+  background-position: 0% 100%;
+}
+#wrap #content > ul.list > li:nth-child(5) {
+  background-image: url("../img2/bg.jpg");
+  background-position: 0% 0%;
+}
+#wrap #content > ul.dot {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  width: 20px;
+  top: 35%;
+}
+#wrap #content > ul.dot > li {
+  width: 10px;
+  height: 10px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+#wrap #content > ul.dot > li.active {
+  background: greenyellow;
+}
+.commonTitle,
+.AAA section header,
+.BBB > section header,
+.CCC section header,
+.DDD section header {
+  color: #009ee0;
+  font: bold 80px/0.8 Georgia;
+  letter-spacing: -5px;
+}
+.commonText,
+.AAA section .A2,
+.CCC section .text,
+.DDD section .text,
+.DDD section .text_bu {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.commonSection,
+.home_p section,
+.AAA section,
+.BBB > section,
+.CCC section,
+.DDD section {
+  width: 1100px;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@keyframes AI {
+  from {
+    transform: rotateY(0deg);
+  }
+  49% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    left: 500px;
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes leftHide {
+  from {
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(-40%) rotateY(30deg) scale(0.8);
+  }
+  to {
+    transform: translateZ(-200px);
+    visibility: hidden;
+  }
+}
+@keyframes rightShow {
+  from {
+    visibility: hidden;
+    transform: translateZ(-200px);
+  }
+  50% {
+    transform: translateX(40%) rotateY(-30deg) scale(0.8);
+  }
+}
+@keyframes leftShow {
+  from {
+    visibility: hidden;
+    transform: translateZ(-200px);
+  }
+  50% {
+    transform: translateX(-40%) rotateY(30deg) scale(0.8);
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes rightHide {
+  from {
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(40%) rotateY(-30deg) scale(0.8);
+  }
+  to {
+    transform: translateZ(-200px);
+    visibility: hidden;
+  }
+}
+.plane1,
+.plane2,
+.plane3,
+.pencil1,
+.pencil2,
+.pencil3,
+#content .CCC .box-wrap .box1,
+#content .CCC .box-wrap .box2,
+#content .DDD header,
+#content .DDD .text,
+#content .DDD .text_bu {
+  transition: transform 1s , opacity 1s;
+}
+#content .DDD .text_bu {
+  transition: transform 3s , opacity 3s;
+}
+#content ul li.home_p .layer,
+#content ul li.home_p .btn {
+  transition: transform 1.5s , opacity 1.5s;
+}
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-shadow: black 1px 1px 10px;
+}

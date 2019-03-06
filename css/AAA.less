@@ -1,0 +1,155 @@
+.AAA {
+  overflow: hidden;
+  position: relative;
+  z-index:2;
+  section{
+
+    &:extend(.commonSection);
+    header{
+      &:extend(.commonTitle);
+      position: relative;
+      z-index:2 ;
+    }
+    .A2{
+      &:extend(.commonText);
+      width:400px;
+      margin-top:50px;
+      position: relative;
+      z-index:2 ;
+    }
+    .A3{
+      width:480px;
+      position: absolute;
+      right:50px;
+      top:70px;
+
+      z-index:2 ;
+      .line{
+        position: absolute;
+        width:9px;
+        height:410px;
+        background:url("../img2/plus_row.png") no-repeat;
+        top:-5px;
+
+        &:nth-of-type(1){
+          left:-4px;
+        }
+        &:nth-of-type(2){
+          left:114px;
+        }
+        &:nth-of-type(3){
+          left:233px;
+        }
+        &:nth-of-type(4){
+          left:352px;
+        }
+        &:nth-of-type(5){
+          left:471px;
+        }
+      }
+      .item{
+        float:left;
+        width:117px;
+        height:132px;
+        margin: 1px;
+        position: relative;
+        perspective:500px;
+        transform-style: preserve-3d;
+        .face,.back{
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          height:100%;
+          width:100%;
+          //box-sizing: border-box;
+          //padding:15px;
+          transition:1s;
+          backface-visibility: hidden;
+        }
+        .face{
+
+          transform: rotateY(180deg);
+          //background-color:#009ee0;
+        }
+        .face img{
+          width:117px;
+          height:132px;
+        }
+        &:nth-of-type(1) .back{
+          background:url('../img2/bks.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(2) .back{
+          background:url('../img2/tata.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(3) .back{
+          background:url('../img2/gu.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(4) .back{
+          background:url('../img2/bks.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(5) .back{
+          background:url('../img2/leonberg.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(6) .back{
+          background:url('../img2/hlx.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(7) .back{
+          background:url('../img2/hlx.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(8) .back{
+          background:url('../img2/leonberg.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(9) .back{
+          background:url('../img2/bks.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(10) .back{
+          background:url('../img2/pcwelt.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(11) .back{
+          background:url('../img2/lbs.png') no-repeat 50% 50%;
+        }
+        &:nth-of-type(12) .back{
+          background:url('../img2/bks.png') no-repeat 50% 50%;
+        }
+
+
+        &:hover .face{
+          transform: rotateY(360deg);
+        }
+        &:hover .back{
+          transform: rotateY(180deg);
+        }
+
+
+      }
+    }
+    .plane1{
+      width:359px;
+      height:283px;
+      position: absolute;
+      left:300px;
+      top:-100px;
+      background:url("../img2/plane1.png") no-repeat;
+    }
+    .plane2{
+      width:309px;
+      height:249px;
+      position: absolute;
+      left:-100px;
+      top:200px;
+      background:url("../img2/plane2.png") no-repeat;
+    }
+    .plane3{
+
+      width:230px;
+      height:182px;
+      position: absolute;
+      left:300px;
+      top:400px;
+      background:url("../img2/plane3.png") no-repeat;
+    }
+  }
+}
